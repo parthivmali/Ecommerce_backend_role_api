@@ -1,0 +1,17 @@
+🔘User Authentication :
+
+Register User   -> POST -> http://localhost:4001/api/v1/register
+Login User      -> POST -> http://localhost:4001/api/v1/login
+Logout User     -> POST -> http://localhost:4001/api/v1/logout
+
+🔘Product Page :
+
+Create A New Product -> POST   -> http://localhost:4001/api/v1/products/new
+Get All Products     -> GET    -> http://localhost:4001/api/v1/products
+Get Product Details  -> GET    -> http://localhost:4001/api/v1/products/:id
+Update Product       -> PUT    -> http://localhost:4001/api/v1/products/:id
+Delete Product       -> DELETE -> http://localhost:4001/api/v1/products/:id
+
+Search Product       -> GET    -> http://localhost:4001/api/v1/search?keyword=wash
+Filter Product       -> GET    -> http://localhost:4001/api/v1/search?price=30000
+Pagination Page      -> GET    -> http://localhost:4001/api/v1/search?page=2&limit=5

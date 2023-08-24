@@ -25,7 +25,6 @@ const userSchemas = new mongoose.Schema({
         type: String,
         require: [true, 'please enter your password'],
         minlength: [8,'password should be at least 8 characters'],
-        select: false
     },
     avatar: {
         public_id:{
@@ -39,11 +38,9 @@ const userSchemas = new mongoose.Schema({
     },
     role: {
         type: String,
+        enum: ['user', 'admin'],
         default: 'user'
     },
-
-    resetPasswordToken : String,
-    resetPasswordExpire: Date,
 })
 
 userSchemas.pre('save', async function(next) {
