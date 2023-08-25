@@ -21,14 +21,8 @@ const productSchemas = new mongoose.Schema({
         default: 0
     },
     images: {
-        public_id: {
-            type: String,
-
-        },
-        url: {
-            type: String,
-            required: true
-        }
+        type: String,
+        required: true
     },
     category: {
         type: String,
@@ -43,20 +37,6 @@ const productSchemas = new mongoose.Schema({
     numOfReviews: {
         type: Number,
         default: 0
-    },
-    reviews: {
-        name: {
-            type: String,
-            required: true
-        },
-        ratings: {
-            type: Number,
-            required: true
-        },
-        comment: {
-            type: String,
-            required: true
-        }
     },
     createdAt: {
         type: Date,

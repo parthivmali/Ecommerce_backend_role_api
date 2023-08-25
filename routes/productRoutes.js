@@ -8,11 +8,11 @@ const {
     deleteProducts,
     filteredProducts
  } = require('../controllers/productController');
-const { isAuthenticatedUser } = require('../middleware/auth')
+// const { isAuthenticatedUser } = require('../middleware/auth')
 
 
 router.route('/products/new').post(createProduct)
-router.route('/products').get(isAuthenticatedUser, getAllProducts)
+router.route('/products').get(getAllProducts)
 
 router.route('/search').get(filteredProducts)
 
