@@ -12,7 +12,7 @@ const productSchemas = new mongoose.Schema({
         required: [true, 'please enter the description']
     },
     price: {
-        type : Number,
+        type : String,
         required: [true, 'please enter the product price'],
         maxlength : [8,'price cannot be empty']
     },
@@ -29,10 +29,9 @@ const productSchemas = new mongoose.Schema({
         required: [true,'please enter the product category']
     },
     stock: {
-        type: Number,
+        type: String,
         required: [true,'please enter the product length'],
         maxlength: [4,'stock length must be 4 char'],
-        default:1
     },
     numOfReviews: {
         type: Number,
