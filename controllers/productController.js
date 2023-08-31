@@ -5,8 +5,8 @@ const ApiFeatures = require('../utils/apifeatures');
 // create a product --admin
 exports.createProduct= CatchAsyncErrors( async (req,res)=>{
     const {prod_name, description, price, category, stock} = req.body
-    console.log("Req File=>",req.file);
-    console.log("Req Body=>",req.body);
+    // console.log("Req File=>",req.file);
+    // console.log("Req Body=>",req.body);
     // const product = await Product.create(req.body);
 
     const response = new Product ({
@@ -47,7 +47,7 @@ exports.getProductDetails = CatchAsyncErrors(async (req,res,next) => {
 // Update Products :
 exports.updateProduct = CatchAsyncErrors(async(req,res) => {
     const {prod_name, description, price, category, stock} = req.body
-    console.log("req=>",req);
+    // console.log("req=>",req);
     let product = await Product.findById(req.params.id)
     if(!product) {
         res.status(400).send("Product not found");
@@ -96,7 +96,7 @@ exports.filteredProducts = CatchAsyncErrors(async(req,res,next) => {
  
 
      const results = await query.exec()
-    //  console.log("Results =>",results);  
+     console.log("Results =>",results);  
      
      res.status(200).json({
          success: true,
